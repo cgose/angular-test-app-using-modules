@@ -1,7 +1,11 @@
 (function(){
 'use strict';
 angular.module('testApp.projects')
-    .config(['$routeProvider', function($routeProvider){
+    .config(config);
+
+    config.$inject = ['$routeProvider'];
+
+    function config($routeProvider){
         $routeProvider
         .when('/', {
             templateUrl: 'projects/projects.view.html'
@@ -10,5 +14,5 @@ angular.module('testApp.projects')
             templateUrl: 'projects/about.view.html'
         })
         
-    }])
+    }
 })();
