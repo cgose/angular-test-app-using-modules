@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><input type="text" ng-model="sampleName" class="form-control"></th>
+            <th><button ng-click="vm.addSample(sampleName)">Add</button></th>
+        </tr>
+        <tr>
+            <th>Sample Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="sample in vm.samples">
+            <td>{{sample}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
